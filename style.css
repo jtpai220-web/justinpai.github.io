@@ -121,7 +121,91 @@ nav {
 }
 
 .btn-resume:hover { background: #94a3b8; color: #ffffff; }
+/* Dark Skills Grid Section */
+.skills-section-dark {
+  background-color: #1a1e29;
+  color: #ffffff;
+  padding: 6rem 0;
+}
 
+.skills-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.skills-header h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.header-line {
+  width: 250px;
+  height: 2px;
+  background-color: var(--accent);
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem 2rem;
+}
+
+.skill-card {
+  text-align: center;
+}
+
+.skill-icon {
+  width: 85px;
+  height: 85px;
+  background-color: #242936;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.75rem;
+  transition: transform 0.3s;
+}
+
+.skill-card:hover .skill-icon {
+  transform: translateY(-5px);
+  background-color: #2a303f;
+}
+
+.skill-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.skill-card p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Ensure the grid stacks on mobile */
+@media (max-width: 850px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
 /* Mobile responsiveness */
 @media (max-width: 850px) {
   .hero { padding: 4rem 0; min-height: auto; }
