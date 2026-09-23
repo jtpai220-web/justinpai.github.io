@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Justin Pai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 5rem; }
+    .about-image { width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+    
+    .about-content h1 { font-size: 2.5rem; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+    .about-content p { font-size: 1.1rem; color: #334155; margin-bottom: 1.5rem; line-height: 1.7; }
+    
+    .skills-section { background: var(--bg-alt); padding: 3rem; border-radius: 12px; border: 1px solid var(--border); }
+    .skills-section h2 { font-size: 1.75rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .skill-category { margin-bottom: 2rem; }
+    .skill-category h3 { font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .skill-tags span { background: #ffffff; border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.95rem; font-weight: 500; color: var(--text-muted); }
+    
+    @media (max-width: 850px) { .about-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  </style>
+</head>
+<body>
+
+  <!-- Updated Navigation -->
+  <nav>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="nav-logo">Justin Pai</a>
+      <ul class="nav-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="resume.pdf" target="_blank" style="color: var(--accent); font-weight: 700;">Resume PDF &darr;</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      
+      <!-- Bio Section -->
+      <div class="about-grid">
+        <!-- Replace this Unsplash link with a professional photo of yourself committed to the repo -->
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Justin Pai" class="about-image">
+        
+        <div class="about-content">
+          <h1>Hi, I'm Justin.</h1>
+          <p>I am an undergraduate mechanical engineering student at The Cooper Union for the Advancement of Science and Art, expecting to graduate in May 2028.</p>
+          <p>My engineering focus bridges analytical modeling with physical execution. I enjoy turning theoretical analysis into functional, high-reliability mechanical systems—whether that means deriving dynamic transfer functions in MATLAB, detailing CAD assemblies in Creo Parametric, or standing at a manual mill cutting aluminum to ±0.002" tolerances.</p>
+          <p>Outside of the machine shop and engineering labs, you can find me analyzing New York Knicks games, maintaining a structured weightlifting and running routine, or exploring digital video production.</p>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="skills-section">
+        <h2>Technical Toolkit</h2>
+        
+        <div class="skill-category">
+          <h3>CAD & Design</h3>
+          <div class="skill-tags">
+            <span>Creo Parametric</span><span>SolidWorks</span><span>Onshape</span><span>AutoCAD</span><span>GD&T</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Analysis & Software</h3>
+          <div class="skill-tags">
+            <span>MATLAB</span><span>Simulink</span><span>Python</span><span>Differential Equations</span><span>Control Theory</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Fabrication & Hardware</h3>
+          <div class="skill-tags">
+            <span>Manual Mill</span><span>Precision Machining</span><span>Rapid Prototyping</span><span>Microcontrollers (ESP32)</span><span>Servo Integration</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:contact@justin-pai.com">Email</a>
+        <a href="https://linkedin.com/">LinkedIn</a>
+      </div>
+      <div style="color: #64748b; font-size: 0.85rem; margin-top: 1rem;">&copy; 2026 Justin Pai. Hosted on GitHub Pages.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
