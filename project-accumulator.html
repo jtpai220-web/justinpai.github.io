@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV Accumulator Housing | Justin Pai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific styling for the deep-dive layout */
+    .case-study-hero { margin-bottom: 4rem; }
+    .case-study-hero img { width: 100%; height: 450px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; border: 1px solid var(--border); }
+    .case-study-header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .quick-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 2rem; background: var(--bg-alt); border-radius: 8px; margin-bottom: 4rem; border: 1px solid var(--border); }
+    .fact h4 { font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .fact p { font-weight: 600; font-size: 1rem; }
+    
+    .article-body { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #334155; }
+    .article-body h2 { color: var(--text-main); font-size: 1.75rem; margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .article-body p { margin-bottom: 1.5rem; }
+    .article-body img { width: 100%; border-radius: 8px; margin: 2rem 0; border: 1px solid var(--border); }
+    
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--text-muted); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--accent); }
+
+    @media (max-width: 768px) { .quick-facts { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="nav-logo">Justin Pai</a>
+      <ul class="nav-links">
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="experience.html">Experience & Education</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      
+      <a href="projects.html" class="back-link">&larr; Back to Projects</a>
+
+      <div class="case-study-hero">
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" alt="Hero Image">
+        <div class="case-study-header">
+          <h1>EV Accumulator Housing</h1>
+          <p style="font-size: 1.2rem; color: var(--text-muted);">Precision Machining & Mechanical Design</p>
+        </div>
+      </div>
+
+      <div class="quick-facts">
+        <div class="fact"><h4>Role</h4><p>Machinist & Chassis Member</p></div>
+        <div class="fact"><h4>Organization</h4><p>Cooper Union Motorsport</p></div>
+        <div class="fact"><h4>Timeline</h4><p>Aug 2025 – Present</p></div>
+        <div class="fact"><h4>Key Tools</h4><p>SolidWorks, Manual Mill, GD&T</p></div>
+      </div>
+
+      <div class="article-body">
+        <h2>Problem Statement & Constraints</h2>
+        <p>The electric formula-style vehicle required a robust accumulator housing to protect the battery cells while maintaining critical weight limits. The design needed to account for dynamic structural loads, heat dissipation during peak output, and strict formula rules regarding mechanical tolerances.</p>
+        
+        <h2>Design & Simulation</h2>
+        <p>Using SolidWorks, the enclosure components were designed with structural rigidity in mind. Detailed GD&T was applied to the drawings to ensure all parts would mate seamlessly. [Insert details about FEA or thermal simulations here if applicable].</p>
+        
+        <!-- Placeholder for a secondary image (e.g. CAD render or machining photo) -->
+        <img src="https://images.unsplash.com/photo-1629853315998-d142bd5642a8?auto=format&fit=crop&w=800&q=80" alt="Machining process">
+        
+        <h2>Fabrication & Machining</h2>
+        <p>I machined the custom 6061 aluminum components using a manual knee mill. The most challenging aspect was maintaining the ±0.002" critical interface tolerances required for the mounting plates to ensure the structural integrity of the pack under race conditions.</p>
+
+        <h2>Result & Impact</h2>
+        <p>The final components were delivered on schedule and met all dimension checks. The completed assembly minimized overall pack weight without compromising the safety factor, ensuring reliable integration into the vehicle chassis.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:contact@justin-pai.com">Email</a>
+        <a href="https://linkedin.com/">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
