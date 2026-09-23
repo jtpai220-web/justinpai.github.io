@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EV Accumulator Housing | Justin Pai</title>
+  <title>Projects | Justin Pai</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Specific styling for the deep-dive layout */
-    .case-study-hero { margin-bottom: 4rem; }
-    .case-study-hero img { width: 100%; height: 450px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; border: 1px solid var(--border); }
-    .case-study-header h1 { font-size: 3rem; margin-bottom: 1rem; }
-    .quick-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 2rem; background: var(--bg-alt); border-radius: 8px; margin-bottom: 4rem; border: 1px solid var(--border); }
-    .fact h4 { font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem; }
-    .fact p { font-weight: 600; font-size: 1rem; }
+    .project-detail { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; margin-bottom: 7rem; }
+    .project-detail img { width: 100%; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+    .project-info h2 { font-size: 2.25rem; margin-bottom: 1rem; }
+    .project-info p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem; }
+    .tech-stack { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .tech-stack span { background: var(--pill-bg); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
     
-    .article-body { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #334155; }
-    .article-body h2 { color: var(--text-main); font-size: 1.75rem; margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-    .article-body p { margin-bottom: 1.5rem; }
-    .article-body img { width: 100%; border-radius: 8px; margin: 2rem 0; border: 1px solid var(--border); }
-    
-    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--text-muted); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
-    .back-link:hover { color: var(--accent); }
+    /* Clean "Read More" Button */
+    .btn-read-more {
+      display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem;
+      color: var(--accent); font-weight: 600; text-decoration: none; font-size: 1rem;
+      border: 1px solid var(--border); padding: 0.6rem 1.2rem; border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .btn-read-more:hover { background: var(--bg-alt); border-color: var(--accent); }
 
-    @media (max-width: 768px) { .quick-facts { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 850px) { .project-detail { grid-template-columns: 1fr; gap: 2rem; } }
   </style>
 </head>
 <body>
@@ -40,39 +40,47 @@
 
   <section class="section">
     <div class="container">
-      
-      <a href="projects.html" class="back-link">&larr; Back to Projects</a>
+      <div class="section-header" style="text-align: left; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem;">
+        <h2>Engineering Projects</h2>
+      </div>
 
-      <div class="case-study-hero">
-        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" alt="Hero Image">
-        <div class="case-study-header">
-          <h1>EV Accumulator Housing</h1>
-          <p style="font-size: 1.2rem; color: var(--text-muted);">Precision Machining & Mechanical Design</p>
+      <!-- Project 1: EV Accumulator -->
+      <div id="ev-accumulator" class="project-detail">
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="EV Accumulator Housing">
+        <div class="project-info">
+          <h2>EV Accumulator Housing</h2>
+          <div class="tech-stack">
+            <span>SolidWorks</span><span>Manual Mill</span><span>GD&T</span>
+          </div>
+          <p>Designed and machined custom 6061 aluminum accumulator enclosure components for an electric formula-style vehicle. Focused on structural rigidity, heat dissipation, and tight mechanical tolerances.</p>
+          <a href="project-accumulator.html" class="btn-read-more">View Full Case Study &rarr;</a>
         </div>
       </div>
 
-      <div class="quick-facts">
-        <div class="fact"><h4>Role</h4><p>Machinist & Chassis Member</p></div>
-        <div class="fact"><h4>Organization</h4><p>Cooper Union Motorsport</p></div>
-        <div class="fact"><h4>Timeline</h4><p>Aug 2025 – Present</p></div>
-        <div class="fact"><h4>Key Tools</h4><p>SolidWorks, Manual Mill, GD&T</p></div>
+      <!-- Project 2: Suspension -->
+      <div id="dynamic-suspension" class="project-detail">
+        <div class="project-info" style="order: 2;">
+          <h2>Dynamic Suspension Simulation</h2>
+          <div class="tech-stack">
+            <span>Python</span><span>Simulink</span><span>Laplace Transforms</span>
+          </div>
+          <p>Formulated quarter-car dynamic models using second-order differential equations and Laplace transforms. Simulated damping, natural frequencies, and state-space response under transient step and impulse inputs.</p>
+          <a href="project-suspension.html" class="btn-read-more">View Full Case Study &rarr;</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Suspension Simulation" style="order: 1;">
       </div>
 
-      <div class="article-body">
-        <h2>Problem Statement & Constraints</h2>
-        <p>The electric formula-style vehicle required a robust accumulator housing to protect the battery cells while maintaining critical weight limits. The design needed to account for dynamic structural loads, heat dissipation during peak output, and strict formula rules regarding mechanical tolerances.</p>
-        
-        <h2>Design & Simulation</h2>
-        <p>Using SolidWorks, the enclosure components were designed with structural rigidity in mind. Detailed GD&T was applied to the drawings to ensure all parts would mate seamlessly. [Insert details about FEA or thermal simulations here if applicable].</p>
-        
-        <!-- Placeholder for a secondary image (e.g. CAD render or machining photo) -->
-        <img src="https://images.unsplash.com/photo-1629853315998-d142bd5642a8?auto=format&fit=crop&w=800&q=80" alt="Machining process">
-        
-        <h2>Fabrication & Machining</h2>
-        <p>I machined the custom 6061 aluminum components using a manual knee mill. The most challenging aspect was maintaining the ±0.002" critical interface tolerances required for the mounting plates to ensure the structural integrity of the pack under race conditions.</p>
-
-        <h2>Result & Impact</h2>
-        <p>The final components were delivered on schedule and met all dimension checks. The completed assembly minimized overall pack weight without compromising the safety factor, ensuring reliable integration into the vehicle chassis.</p>
+      <!-- Project 3: Solar Tracker -->
+      <div id="solar-tracker" class="project-detail">
+        <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar Tracker">
+        <div class="project-info">
+          <h2>Dual-Axis Solar Tracker</h2>
+          <div class="tech-stack">
+            <span>ESP32</span><span>Onshape</span><span>Controls</span>
+          </div>
+          <p>Built a closed-loop dual-axis solar tracking platform utilizing ambient light sensors and dual-servo actuation to maximize photovoltaic incidence angles throughout diurnal cycles.</p>
+          <a href="project-solar.html" class="btn-read-more">View Full Case Study &rarr;</a>
+        </div>
       </div>
 
     </div>
