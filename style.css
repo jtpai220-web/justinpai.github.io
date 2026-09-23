@@ -51,7 +51,7 @@ nav {
 .hero-bio { color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin: 0 auto 2rem; }
 
 /* Home Page Project Showcase Images */
-.showcase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+.showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
 .showcase-link { display: block; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); transition: transform 0.3s; position: relative; }
 .showcase-link:hover { transform: translateY(-5px); box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1); }
 .showcase-link img { width: 100%; height: 350px; object-fit: cover; display: block; transition: 0.3s; }
