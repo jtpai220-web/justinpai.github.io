@@ -148,13 +148,15 @@ nav {
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This perfectly centers the bottom row! */
   gap: 4rem 2rem;
 }
 
 .skill-card {
   text-align: center;
+  flex: 0 1 320px; /* Forces each card to be a consistent width */
 }
 
 .skill-icon {
