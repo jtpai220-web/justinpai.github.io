@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Justin Pai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 6rem; }
+    .project-detail img { width: 100%; border-radius: 8px; border: 1px solid var(--border); }
+    .project-info h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .project-info p { color: var(--text-muted); margin-bottom: 1.5rem; }
+    .tech-stack { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .tech-stack span { background: var(--pill-bg); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
+    @media (max-width: 768px) { .project-detail { grid-template-columns: 1fr; gap: 1.5rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="nav-logo">Justin Pai</a>
+      <ul class="nav-links">
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="experience.html">Experience & Education</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Engineering Projects</h2>
+      </div>
+
+      <!-- Project 1 -->
+      <div id="ev-accumulator" class="project-detail">
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="EV Accumulator Housing">
+        <div class="project-info">
+          <h2>EV Accumulator Housing</h2>
+          <div class="tech-stack">
+            <span>SolidWorks</span><span>Manual Mill</span><span>GD&T</span>
+          </div>
+          <p>Designed and machined custom 6061 aluminum accumulator enclosure components for an electric formula-style vehicle. Focused on structural rigidity, heat dissipation, and tight mechanical tolerances.</p>
+          <ul class="timeline-list">
+            <li>Machined accumulator components on a manual mill.</li>
+            <li>Maintained ±0.002" critical interface tolerances.</li>
+            <li>Minimized overall pack weight while ensuring structural integrity.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div id="dynamic-suspension" class="project-detail">
+        <div class="project-info" style="order: 2;">
+          <h2>Dynamic Suspension Modeling</h2>
+          <div class="tech-stack">
+            <span>Python</span><span>Simulink</span><span>Laplace Transforms</span>
+          </div>
+          <p>Formulated quarter-car dynamic models using second-order differential equations and Laplace transforms. Simulated damping, natural frequencies, and state-space response under transient step and impulse inputs.</p>
+          <ul class="timeline-list">
+            <li>Evaluated mass-spring-damper equations utilizing Python scripts.</li>
+            <li>Analyzed system responses to input forces to optimize shock absorption.</li>
+          </ul>
+        </div>
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Suspension Simulation" style="order: 1;">
+      </div>
+
+      <!-- Project 3 -->
+      <div id="solar-tracker" class="project-detail">
+        <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar Tracker">
+        <div class="project-info">
+          <h2>Dual-Axis Solar Tracker</h2>
+          <div class="tech-stack">
+            <span>ESP32</span><span>Onshape</span><span>Mechatronics</span>
+          </div>
+          <p>Built a closed-loop dual-axis solar tracking platform utilizing ambient light sensors and dual-servo actuation to maximize photovoltaic incidence angles throughout diurnal cycles.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:contact@justin-pai.com">Email</a>
+        <a href="https://linkedin.com/">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
