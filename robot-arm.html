@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6-DOF Robotic Arm | Justin Pai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .case-study-hero { margin-bottom: 4rem; }
+    .case-study-hero img { width: 100%; height: 450px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; border: 1px solid var(--border); }
+    .case-study-header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .quick-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 2rem; background: var(--bg-alt); border-radius: 8px; margin-bottom: 4rem; border: 1px solid var(--border); }
+    .fact h4 { font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .fact p { font-weight: 600; font-size: 1rem; }
+    .article-body { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #334155; }
+    .article-body h2 { color: var(--text-main); font-size: 1.75rem; margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .article-body p { margin-bottom: 1.5rem; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--text-muted); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--accent); }
+    @media (max-width: 768px) { .quick-facts { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="nav-logo">Justin Pai</a>
+      <ul class="nav-links">
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.pdf" target="_blank" style="color: var(--accent); font-weight: 700;">Resume PDF &darr;</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <a href="projects.html" class="back-link">&larr; Back to Projects</a>
+      <div class="case-study-hero">
+        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80" alt="Robotic Arm">
+        <div class="case-study-header">
+          <h1>6-DOF Robotic Arm</h1>
+          <p style="font-size: 1.2rem; color: var(--text-muted);">Mechatronics & Kinematics</p>
+        </div>
+      </div>
+
+      <div class="quick-facts">
+        <div class="fact"><h4>Status</h4><p>Currently in Development</p></div>
+        <div class="fact"><h4>Focus</h4><p>Mechatronics & Kinematics</p></div>
+        <div class="fact"><h4>Timeline</h4><p>August 2026 – Present</p></div>
+        <div class="fact"><h4>Key Tools</h4><p>ESP32, Servo Drivers</p></div>
+      </div>
+
+      <div class="article-body">
+        <h2>Project Overview</h2>
+        <p>I am collaborating with fellow mechanical engineer Euan Chung at NYU Tandon to create a custom 6-degree-of-freedom (6-DOF) robotic arm to deepen my expertise in mechatronics, mechanical design, and hardware integration. The current goal is to support a 5-pound payload at a fully extended reach of 2 feet. While initial control will be handled via a custom mobile application utilizing the ESP32’s onboard Wi-Fi, the overarching goal is to transition the robot to fully autonomous operation.</p>
+        
+        <h2>Mechanics & Mechanical Design</h2>
+        <p>We are currently focused on modeling the arm's components in CAD and performing the torque calculations to define the physical limits of the system. By analyzing the static and dynamic loads, I am determining the exact motor specifications required to ensure the base and shoulder servos can comfortably handle the 5-pound payload and moment of inertia at full extension.</p>
+        
+        <!-- Replace the src link with the file name of your CAD screenshot (e.g., "arm-cad.jpg") -->
+        <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80" alt="Robotic Arm CAD Model" style="width: 100%; border-radius: 8px; margin: 1.5rem 0 2.5rem; border: 1px solid var(--border);">
+        
+        <h2>Electronics & Control Architecture</h2>
+        <p>The control architecture is driven by an ESP32 microcontroller. I am currently drafting the electrical schematics to integrate and route power to all hardware components and servo drivers.</p>
+
+        <h2>Future Integration & Autonomy</h2>
+        <p>While current development is focused on the mechanical build and manual kinematic control, the long-term objective is to transition the system to fully autonomous operation. Future work includes mounting the manipulator onto a mobile rover. By integrating computer vision and spatial sensors, the unified system will be programmed to actively detect target objects, autonomously navigate complex environments to reach them, and execute pick-and-place operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:jtpai220@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/justin-pai-081906383" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
