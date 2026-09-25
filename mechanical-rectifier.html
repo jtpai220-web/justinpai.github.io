@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mechanical Rectifier | Justin Pai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .case-study-hero { margin-bottom: 4rem; }
+    .case-study-hero img { width: 100%; height: 450px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; border: 1px solid var(--border); }
+    .case-study-header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .quick-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 2rem; background: var(--bg-alt); border-radius: 8px; margin-bottom: 4rem; border: 1px solid var(--border); }
+    .fact h4 { font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .fact p { font-weight: 600; font-size: 1rem; }
+    .article-body { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #334155; }
+    .article-body h2 { color: var(--text-main); font-size: 1.75rem; margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .article-body p { margin-bottom: 1.5rem; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--text-muted); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--accent); }
+    @media (max-width: 768px) { .quick-facts { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="nav-logo">Justin Pai</a>
+      <ul class="nav-links">
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="experience.html">Experience & Education</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.pdf" target="_blank" style="color: var(--accent); font-weight: 700;">Resume PDF &darr;</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <a href="projects.html" class="back-link">&larr; Back to Projects</a>
+      <div class="case-study-hero">
+        <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1200&q=80" alt="Mechanical Rectifier System">
+        <div class="case-study-header">
+          <h1>Mechanical Rectifier System</h1>
+          <p style="font-size: 1.2rem; color: var(--text-muted);">Mechanical Design & Computational Modeling</p>
+        </div>
+      </div>
+
+      <div class="quick-facts">
+        <div class="fact"><h4>Type</h4><p>EID-103 Design Project</p></div>
+        <div class="fact"><h4>Focus</h4><p>Mechanisms & Control Theory</p></div>
+        <div class="fact"><h4>Timeline</h4><p>Spring 2025</p></div>
+        <div class="fact"><h4>Key Tools</h4><p>Onshape, Iterative Prototyping, MATLAB, 3D Printing</p></div>
+      </div>
+
+      <div class="article-body">
+        <h2>Project Overview</h2>
+        <p>For the EID-103 Principles of Design course, I collaborated with two fellow engineers to develop the "Homie Rektifier," a purely passive mechanical system designed to convert erratic, unidirectional rotary motion into a constant-velocity output without the use of electrical motors. Drawing inspiration from the geartrain mechanics of a cheap hand-pressed mechanical fan, we engineered a system capable of driving an output shaft at a perfectly uniform speed despite highly uneven input rotation.</p>
+        
+        <h2>Mechanical Design & Prototyping</h2>
+        <p>The system's geometry was modeled entirely in Onshape and iteratively manufactured using Prusa 3D printers. To achieve mechanical rectification without direct gear-to-gear power coupling, we separated the transmission into distinct subsystems. The initial uneven rotary motion came from a stepper motor fluctuating speeds and first, the motor connected to a cam and spring-loaded lever convert the unstable rotational input into reciprocating motion. This motion drives a custom sliding gear mechanism that selectively engages whenever enough torque is applied throughout the entire geartrain to deliver unidirectional pulses of power to a heavy flywheel. By acting as a mechanical energy reservoir, the flywheel stores this rotational inertia to successfully filter out input fluctuations and maintain a constant output velocity.</p>
+        
+        <!-- Optional Image Gallery Placeholder -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0 2rem;">
+          <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=600&q=80" alt="Mechanical Assembly View 1" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; border: 1px solid var(--border);">
+          <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=600&q=80" alt="Mechanical Assembly View 2" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+
+        <h2>Mathematical Modeling & Control Theory</h2>
+        <p>To validate the physical dynamics, I and fellow mechanical engineer Aleks Szetela, developed a comprehensive theoretical model of the system using Laplace transforms. By mathematically modeling the electromechanical equations of the DC motor, the cam-lever transmission, the sliding gear, and the equivalent inertia and damping of the flywheel, I derived the overall transfer function relating input voltage to output angular velocity[cite: 3]. Using this model, I calculated key transient properties for the system, including a natural frequency of 32.6 rad/s, a dominant time constant of 0.892 seconds, a settling time of 3.57 seconds, and 0% percent overshoot[cite: 3].</p>
+
+        <h2>MATLAB Simulation & Experimental Validation</h2>
+        <p>I utilized MATLAB to simulate the system's step response across varying inputs of 7.5V, 9.0V, and 12.0V[cite: 3]. We then compared these theoretical models against physical experimental data[cite: 3]. The mechanism successfully filtered the unstable input across all tested voltage levels[cite: 4]. Most notably, at a 9V input, our mechanical rectifier reduced the output angular velocity fluctuation range from 1420 degrees per second (unrectified) down to a highly stable range of just 30 degrees per second[cite: 4].</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:jtpai220@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/justin-pai-081906383" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
