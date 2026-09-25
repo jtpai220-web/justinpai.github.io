@@ -55,11 +55,20 @@
 
       <div class="article-body">
         <h2>Project Overview</h2>
-        <p>For the EID-103 Principles of Design course, I collaborated with two fellow engineers to develop the "Homie Rektifier," a purely passive mechanical system designed to convert erratic, unidirectional rotary motion into a constant-velocity output without the use of electrical motors. Drawing inspiration from the geartrain mechanics of a cheap hand-pressed mechanical fan, we engineered a system capable of driving an output shaft at a perfectly uniform speed despite highly uneven input rotation.</p>
+        <p>For the EID-103 Principles of Design course, I collaborated with two fellow engineers to develop the "Homie Rektifier," a purely passive mechanical system designed to convert erratic, unidirectional rotary motion into a constant-velocity output without the use of electrical motors. Drawing inspiration from the geartrain mechanics of a cheap hand-pressed mechanical fan, we engineered a multi-stage system capable of driving an output shaft at nearly uniform speed.</p>
+
+        <iframe 
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+          title="Homie Rektifier Demonstration" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="width: 100%; aspect-ratio: 16/9; border-radius: 8px; border: 1px solid var(--border); margin: 1.5rem 0 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        </iframe>
         
         <h2>Mechanical Design & Prototyping</h2>
-        <p>The system's geometry was modeled entirely in Onshape and iteratively manufactured using Prusa 3D printers. To achieve mechanical rectification without direct gear-to-gear power coupling, we separated the transmission into distinct subsystems. The initial uneven rotary motion came from a stepper motor fluctuating speeds and first, the motor connected to a cam and spring-loaded lever convert the unstable rotational input into reciprocating motion. This motion drives a custom sliding gear mechanism that selectively engages whenever enough torque is applied throughout the entire geartrain to deliver unidirectional pulses of power to a heavy flywheel. By acting as a mechanical energy reservoir, the flywheel stores this rotational inertia to successfully filter out input fluctuations and maintain a constant output velocity.</p>
-        
+        <p>The system was modeled entirely in Onshape and iteratively manufactured using Prusa 3D printers. To achieve true mechanical rectification, we separated the transmission into distinct subsystems. First, a cam and spring-loaded lever convert the erratic input of a fluctuating stepper motor into reciprocating motion. This drives a geartrain with a custom sliding gear mechanism at the end that selectively engages under sufficient torque, delivering unidirectional pulses of power to a heavy flywheel. Acting as a mechanical energy reservoir, the flywheel stores this inertia to filter out input fluctuations and maintain a constant output velocity.</p>
+        <p>For more information about the specifics of the design and the iterative process, here is the technical report is below</p>
         <!-- Optional Image Gallery Placeholder -->
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0 2rem;">
           <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=600&q=80" alt="Mechanical Assembly View 1" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; border: 1px solid var(--border);">
@@ -67,10 +76,10 @@
         </div>
 
         <h2>Mathematical Modeling & Control Theory</h2>
-        <p>To validate the physical dynamics, I and fellow mechanical engineer Aleks Szetela, developed a comprehensive theoretical model of the system using Laplace transforms. By mathematically modeling the electromechanical equations of the DC motor, the cam-lever transmission, the sliding gear, and the equivalent inertia and damping of the flywheel, I derived the overall transfer function relating input voltage to output angular velocity[cite: 3]. Using this model, I calculated key transient properties for the system, including a natural frequency of 32.6 rad/s, a dominant time constant of 0.892 seconds, a settling time of 3.57 seconds, and 0% percent overshoot[cite: 3].</p>
+        <p>To validate the physical dynamics, I and fellow mechanical engineer Aleks Szetela, developed a comprehensive theoretical model of the system using Laplace transforms. By mathematically modeling the electromechanical equations of the DC motor and all the subsystems, we derived the overall transfer function relating input voltage to output angular velocity. Using this model, we calculated key transient properties for the system, including a natural frequency of 32.6 rad/s, a dominant time constant of 0.892 seconds, a settling time of 3.57 seconds, and 0% percent overshoot[cite: 3].</p>
 
         <h2>MATLAB Simulation & Experimental Validation</h2>
-        <p>I utilized MATLAB to simulate the system's step response across varying inputs of 7.5V, 9.0V, and 12.0V[cite: 3]. We then compared these theoretical models against physical experimental data[cite: 3]. The mechanism successfully filtered the unstable input across all tested voltage levels[cite: 4]. Most notably, at a 9V input, our mechanical rectifier reduced the output angular velocity fluctuation range from 1420 degrees per second (unrectified) down to a highly stable range of just 30 degrees per second[cite: 4].</p>
+        <p>I utilized MATLAB to simulate the system's step response across varying inputs of 7.5V, 9.0V, and 12.0V. We then compared these theoretical models against physical experimental data[cite: 3]. The mechanism successfully filtered the unstable input across all tested voltage levels[cite: 4]. Most notably, at a 9V input, our mechanical rectifier reduced the output angular velocity fluctuation range from 1420 degrees per second (unrectified) down to a highly stable range of just 30 degrees per second[cite: 4].</p>
       </div>
     </div>
   </section>
