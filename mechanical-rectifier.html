@@ -65,22 +65,58 @@
           allowfullscreen 
           style="width: 100%; aspect-ratio: 16/9; border-radius: 8px; border: 1px solid var(--border); margin: 1.5rem 0 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
         </iframe>
-        
+
         <h2>Mechanical Design & Prototyping</h2>
-        <p>The system was modeled entirely in Onshape and iteratively manufactured using Prusa 3D printers. To achieve true mechanical rectification, we separated the transmission into distinct subsystems. First, a cam and spring-loaded lever convert the erratic input of a fluctuating stepper motor into reciprocating motion. This drives a geartrain with a custom sliding gear mechanism at the end that selectively engages under sufficient torque, delivering unidirectional pulses of power to a heavy flywheel. Acting as a mechanical energy reservoir, the flywheel stores this inertia to filter out input fluctuations and maintain a constant output velocity.</p>
-        <p>For more information about the specifics of the design and the iterative process, here is the technical report is below</p>
-        <!-- Optional Image Gallery Placeholder -->
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0 2rem;">
-          <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=600&q=80" alt="Mechanical Assembly View 1" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; border: 1px solid var(--border);">
-          <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=600&q=80" alt="Mechanical Assembly View 2" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; border: 1px solid var(--border);">
-        </div>
+        <p>The system was modeled entirely in Onshape and iteratively manufactured using Prusa 3D printers. To achieve mechanical rectification, we separated the transmission into distinct subsystems:</p>
+        
+        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; line-height: 1.6;">
+          <li style="margin-bottom: 0.75rem;">
+            <strong>Cam & Lever Actuator:</strong> Converts the erratic input of a fluctuating stepper motor into reciprocating motion using a spring-loaded lever.
+          </li>
+          <li style="margin-bottom: 0.75rem;">
+            <strong>Sliding Gear Mechanism:</strong> A custom gear train with a sliding gear at the end that selectively engages under sufficient torque to deliver unidirectional pulses of power.
+          </li>
+          <li style="margin-bottom: 0.75rem;">
+            <strong>Inertial Flywheel:</strong> Acts as a mechanical energy reservoir, storing rotational inertia to filter out input fluctuations and maintain a constant output velocity.
+          </li>
+        </ul>
+
+       <h2>Performance Results</h2>
+        <p>The table below compares the raw angular velocity of the fluctuating stepper motor against the rectified output of the system. Across multiple input voltages, the mechanism achieved nearly a 95% reduction in velocity variance, demonstrating a highly stable and consistent rotational output.</p>
+        
+        <!-- Replace src with your actual table screenshot file name (e.g., "results-table.png") -->
+        <img src="https://images.unsplash.com/photo-1543286386-2e659306cd6c?auto=format&fit=crop&w=800&q=80" alt="Angular Velocity Results Table" style="width: 100%; border-radius: 8px; border: 1px solid var(--border); margin: 1.5rem 0 2rem;">
+
+        <p>For comprehensive details regarding the iterative design process and full system specifications, please refer to the complete technical report below.</p>
+        
+        <!-- Replace href with the actual file name of your PDF -->
+        <a href="Homie-Rektifier-Final-Report.pdf" target="_blank" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 0.5rem; transition: opacity 0.2s;">
+          Read Technical Report &rarr;
+        </a>
 
         <h2>Mathematical Modeling & Control Theory</h2>
-        <p>To validate the physical dynamics, I and fellow mechanical engineer Aleks Szetela, developed a comprehensive theoretical model of the system using Laplace transforms. By mathematically modeling the electromechanical equations of the DC motor and all the subsystems, we derived the overall transfer function relating input voltage to output angular velocity. Using this model, we calculated key transient properties for the system, including a natural frequency of 32.6 rad/s, a dominant time constant of 0.892 seconds, a settling time of 3.57 seconds, and 0% percent overshoot[cite: 3].</p>
+       <h2>Mathematical Modeling & Control Theory</h2>
+        <p>To validate the physical dynamics, fellow mechanical engineer Aleks Szetela and I developed a comprehensive theoretical model of the system using Laplace transforms. By mathematically modeling the electromechanical equations of the DC motor and all the subsystems, we derived the overall transfer function relating input voltage to output angular velocity. Using this model, we calculated the following key transient properties for the system:</p>
 
-        <h2>MATLAB Simulation & Experimental Validation</h2>
-        <p>I utilized MATLAB to simulate the system's step response across varying inputs of 7.5V, 9.0V, and 12.0V. We then compared these theoretical models against physical experimental data[cite: 3]. The mechanism successfully filtered the unstable input across all tested voltage levels[cite: 4]. Most notably, at a 9V input, our mechanical rectifier reduced the output angular velocity fluctuation range from 1420 degrees per second (unrectified) down to a highly stable range of just 30 degrees per second[cite: 4].</p>
-      </div>
+        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; line-height: 1.6;">
+          <li style="margin-bottom: 0.5rem;"><strong>Natural Frequency:</strong> 32.6 rad/s[cite: 3]</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Dominant Time Constant:</strong> 0.892 seconds[cite: 3]</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Settling Time:</strong> 3.57 seconds[cite: 3]</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Percent Overshoot:</strong> 0%[cite: 3]</li>
+        </ul>
+        
+        <h2>MATLAB Simulation</h2>
+        <p>Using MATLAB, I simulated the system's step response to analyze the impact of varying motor voltages (7.5V, 9.0V, 12.0V) and sliding gear ratios (2.25, 4.50, 9.00). Generating these plots, shown below, allowed us to isolate the variables, clearly demonstrating the trade-off between higher output speeds and oscillation amplitudes. This data was critical in identifying 9.0V as the system's optimal operating voltage.</p>
+
+        <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1200&q=80" alt="Mechanical Rectifier System">
+        <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1200&q=80" alt="Mechanical Rectifier System">
+
+        <p>For a greater breakdown of the system dynamics, transfer functions, and MATLAB simulation, view the full technical presentation below.</p>
+        
+        <!-- Replace href with the actual file name of your presentation PDF (e.g., "rectifier-presentation.pdf") -->
+        <a href="rectifier-presentation.pdf" target="_blank" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 0.5rem; transition: opacity 0.2s;">
+          View Technical Presentation &rarr;
+        </a>      </div>
     </div>
   </section>
 
