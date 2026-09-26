@@ -246,6 +246,27 @@ nav {
 .timeline-subtitle { font-size: 1rem; color: var(--text-muted); margin-bottom: 0.75rem; }
 .timeline-list { margin-left: 1.25rem; color: var(--text-muted); font-size: 0.95rem; }
 
+/* Showcase Overlay Skill Tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.skill-tag {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px; /* Gives it the rounded 'pill' shape */
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(4px); /* Adds a modern frosted-glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
 /* Footer */
 footer { padding: 4rem 0; text-align: center; background: #0f172a; color: #f8fafc; }
 .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; }
