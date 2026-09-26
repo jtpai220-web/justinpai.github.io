@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dual-Axis Solar Tracker | Justin Pai</title>
+  <title>Sun-Tracking Solar Panel | Justin Pai</title>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Add your standard CSS styles here (same as the other pages) */
     .case-study-hero { margin-bottom: 4rem; }
     .case-study-hero img { width: 100%; height: 450px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; border: 1px solid var(--border); }
     .case-study-header h1 { font-size: 3rem; margin-bottom: 1rem; }
@@ -15,7 +16,7 @@
     .fact p { font-weight: 600; font-size: 1rem; }
     .article-body { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #334155; }
     .article-body h2 { color: var(--text-main); font-size: 1.75rem; margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-    .article-body p { margin-bottom: 1.5rem; }
+    .article-body p { margin-bottom: 1.5rem; line-height: 1.7; }
     .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--text-muted); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
     .back-link:hover { color: var(--accent); }
     @media (max-width: 768px) { .quick-facts { grid-template-columns: 1fr 1fr; } }
@@ -23,6 +24,7 @@
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav>
     <div class="container nav-wrapper">
       <a href="index.html" class="nav-logo">Justin Pai</a>
@@ -39,33 +41,41 @@
     <div class="container">
       <a href="projects.html" class="back-link">&larr; Back to Projects</a>
       <div class="case-study-hero">
-        <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80" alt="Solar Tracker">
+        <!-- Replace with an actual photo of your solar project or a relevant placeholder -->
+        <img src="https://images.unsplash.com/photo-1509391366360-1e97d5261688?auto=format&fit=crop&w=1200&q=80" alt="Sun Tracking Solar Panel Prototype">
         <div class="case-study-header">
-          <h1>Dual-Axis Solar Tracker</h1>
-          <p style="font-size: 1.2rem; color: var(--text-muted);">Mechatronics & Embedded Controls</p>
+          <h1>Sun-Tracking Urban Solar Panel</h1>
+          <p style="font-size: 1.2rem; color: var(--text-muted);">Mechatronics & Sustainable Engineering</p>
         </div>
       </div>
 
       <div class="quick-facts">
-        <div class="fact"><h4>Type</h4><p>Independent Project</p></div>
-        <div class="fact"><h4>Focus</h4><p>Closed-Loop Controls</p></div>
-        <div class="fact"><h4>Timeline</h4><p>2026</p></div>
-        <div class="fact"><h4>Key Tools</h4><p>Onshape, Linear Actuators, Sensors</p></div>
+        <div class="fact"><h4>Type</h4><p>EID-101 Engineering Design Project</p></div>
+        <div class="fact"><h4>Focus</h4><p>Mechatronics & Sensors</p></div>
+        <div class="fact"><h4>Timeline</h4><p>March 2025 - May 2025</p></div>
+        <div class="fact"><h4>Key Tools</h4><p>Onshape, Rapid Prototyping, Arduino</p></div>
       </div>
 
       <div class="article-body">
         <h2>Project Overview</h2>
-        <p>To maximize the efficiency of photovoltaic systems, I designed and built a dual-axis solar tracker capable of autonomously following a light source. This mechatronics project required a complete integration of mechanical design, sensor calibration, and embedded control programming.</p>
+        <p>During one of my first engineering projects at Cooper Union, I collaborated with a team of four other engineers to develop a tangible solution to a pressing urban challenge. We aimed to reduce residential reliance on fossil fuels by designing an efficient, automated sun-tracking solar panel proof-of-concept tailored to New York City's unique architecture.</p>
         
-        <h2>Mechanical Design & Torque Requirements</h2>
-        <p>The mechanical structure was modeled entirely in Onshape, focusing on stability and smooth actuation across two degrees of freedom (pan and tilt). Before fabrication, I calculated the dynamic loads and torque requirements to ensure the selected servo motors could comfortably rotate the panel assembly without stalling or experiencing excessive jitter.</p>
-        
-        <h2>Closed-Loop Control Architecture</h2>
-        <p>The system is driven by an ESP32 microcontroller that actively reads analog inputs from an array of ambient light sensors. I developed a closed-loop control algorithm that processes these differential light values, calculates the error gradient, and outputs synchronized signals to the servo drivers. This continuous feedback loop dynamically adjusts the panel to remain perfectly perpendicular to the strongest light source.</p>
+        <h2>Background Research & Motivation</h2>
+        <p>Our project was driven by the stark reality of New York City's carbon footprint. In 2022, residential buildings in the city emitted over 15 million tons of carbon dioxide, with natural gas usage accounting for nearly 10 million tons of those emissions. This excessive demand is heavily tied to outdated heating and cooling systems. Through our research, we identified that offsetting "peak load" consumption—the maximum energy usage times when the city relies on natural-gas-fueled peaker plants—would significantly decrease both individual electricity bills and the city's overall carbon emissions.</p>
+
+        <h2>Mechanical Design & Urban Integration</h2>
+        <p>To capitalize on the massive amount of unused vertical space on New York City apartment buildings, we designed a consumer-accessible solar solution mountable on windowsills or balconies. Because static vertical panels suffer from poor energy capture, we engineered an active sun-tracking mechanism. Two photoresistors on the panel's edges continuously monitor light intensity, feeding data to linear actuators that automatically tilt the panel to track the sun from east to west, maximizing daily energy absorption.</p>
+        <!-- Placeholder for a video or image of the solar panel moving -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0 2rem;">
+          <img src="https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?auto=format&fit=crop&w=800&q=80" alt="Solar Tracking Mechanism" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+       <h2>Project Impact & The Engineering Process</h2>
+        <p>As one of my first major projects at Cooper Union, this experience was foundational in teaching me the complete, top-down engineering design process. Beyond the technical construction of the tracking mechanism, I learned how to identify a real-world problem, conduct thorough background research, and iteratively develop a physical prototype. This project proved that effective engineering is not just about building hardware; it is about following a rigorous, research-driven methodology to create solutions that have a positive impact on society.</p>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-links">
