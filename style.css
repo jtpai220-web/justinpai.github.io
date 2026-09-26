@@ -46,13 +46,21 @@ nav {
 }
 .btn:hover { background: var(--accent); }
 /* Hero Section - Image Background & Card Layout */
-.hero { 
-  min-height: calc(100vh - 75px); 
-  display: flex; 
-  align-items: center; 
-  /* The line below adds a dark overlay and a background image. Replace the URL with an image of your machine shop/workspace */
-  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1565439390118-bbf3688126b8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  border-bottom: none; 
+
+.hero-section {
+  background-color: #1e293b; /* A deep, modern slate/navy blue */
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the new description paragraph */
+.hero-description {
+  color: #cbd5e1; /* Light gray-blue text so it's easy to read on the dark background */
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-top: 1rem;
 }
 
 .hero-grid {
