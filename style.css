@@ -38,15 +38,15 @@ nav {
 }
 .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 
-/* Buttons & Hero */
+/* Buttons */
 .btn {
   display: inline-flex; align-items: center; background: var(--text-main); color: #fff;
   padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none;
   transition: 0.2s;
 }
 .btn:hover { background: var(--accent); }
-/* Hero Section - Image Background & Card Layout */
 
+/* Hero Section */
 .hero-section {
   background-color: #1e293b; /* A deep, modern slate/navy blue */
   padding: 4rem 0;
@@ -54,18 +54,10 @@ nav {
   align-items: center;
 }
 
-/* Style for the new description paragraph */
-.hero-description {
-  color: #cbd5e1; /* Light gray-blue text so it's easy to read on the dark background */
-  font-size: 1.15rem;
-  line-height: 1.6;
-  max-width: 500px;
-  margin-top: 1rem;
-}
-
-.hero-grid {
+/* This is the grid that splits the text and the card! */
+.hero-container {
   display: grid; 
-  grid-template-columns: 1fr 380px; /* Text takes left space, card takes exactly 380px on right */
+  grid-template-columns: 1fr 380px; 
   align-items: center; 
   gap: 4rem; 
   width: 100%;
@@ -73,10 +65,18 @@ nav {
 
 .hero-text { text-align: left; }
 .hero-text h1 { font-size: 5rem; font-weight: 700; color: #ffffff; letter-spacing: -0.02em; margin-bottom: 0.2rem; line-height: 1.1; }
-.hero-text .tagline { font-size: 1.3rem; font-weight: 600; color: #e2e8f0; letter-spacing: 0.1em; text-transform: uppercase; }
+.hero-text h2 { font-size: 1.3rem; font-weight: 600; color: #e2e8f0; letter-spacing: 0.1em; text-transform: uppercase; }
+
+.hero-description {
+  color: #cbd5e1; 
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-top: 1rem;
+}
 
 /* The White Contact Card */
-.hero-card {
+.contact-card {
   background: #f8fafc;
   padding: 3rem 2.5rem;
   border-radius: 4px;
@@ -84,7 +84,7 @@ nav {
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-.hero-card img.profile-pic {
+.contact-card img.profile-img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -94,7 +94,7 @@ nav {
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-.hero-card p {
+.contact-card p {
   font-size: 0.95rem;
   color: var(--text-muted);
   margin-bottom: 0.4rem;
@@ -118,7 +118,7 @@ nav {
 
 .btn-resume {
   display: block;
-  background: #cbd5e1; /* Pale blue/gray to match the reference */
+  background: #cbd5e1; 
   color: #334155;
   padding: 0.85rem 1.5rem;
   text-decoration: none;
@@ -129,6 +129,7 @@ nav {
 }
 
 .btn-resume:hover { background: #94a3b8; color: #ffffff; }
+
 /* Dark Skills Grid Section */
 .skills-section-dark {
   background-color: #1a1e29;
@@ -158,13 +159,13 @@ nav {
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* This perfectly centers the bottom row! */
+  justify-content: center; 
   gap: 4rem 2rem;
 }
 
 .skill-card {
   text-align: center;
-  flex: 0 1 320px; /* Forces each card to be a consistent width */
+  flex: 0 1 320px; 
 }
 
 .skill-icon {
@@ -209,21 +210,6 @@ nav {
   margin: 0 auto;
 }
 
-/* Ensure the grid stacks on mobile */
-@media (max-width: 850px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-  }
-}
-/* Mobile responsiveness */
-@media (max-width: 850px) {
-  .hero { padding: 4rem 0; min-height: auto; }
-  .hero-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
-  .hero-text { text-align: center; }
-  .hero-text h1 { font-size: 3.5rem; }
-  .hero-card { max-width: 400px; margin: 0 auto; }
-}
 /* Home Page Project Showcase Images */
 .showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
 .showcase-link { display: block; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); transition: transform 0.3s; position: relative; }
@@ -236,6 +222,27 @@ nav {
   padding: 2rem 1.5rem 1.5rem; color: #fff;
 }
 .showcase-overlay h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
+
+/* Showcase Overlay Skill Tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.skill-tag {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
 
 /* Generic Sections */
 .section { padding: 5rem 0; border-bottom: 1px solid var(--border); }
@@ -254,32 +261,25 @@ nav {
 .timeline-subtitle { font-size: 1rem; color: var(--text-muted); margin-bottom: 0.75rem; }
 .timeline-list { margin-left: 1.25rem; color: var(--text-muted); font-size: 0.95rem; }
 
-/* Showcase Overlay Skill Tags */
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
-}
-
-.skill-tag {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  padding: 0.3rem 0.75rem;
-  border-radius: 50px; /* Gives it the rounded 'pill' shape */
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  backdrop-filter: blur(4px); /* Adds a modern frosted-glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
 /* Footer */
 footer { padding: 4rem 0; text-align: center; background: #0f172a; color: #f8fafc; }
 .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; }
 .footer-links a { color: #38bdf8; text-decoration: none; font-weight: 500; }
 .footer-links a:hover { text-decoration: underline; }
+
+/* Mobile responsiveness */
+@media (max-width: 850px) {
+  .hero-section { padding: 4rem 0; min-height: auto; }
+  .hero-container { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+  .hero-text { text-align: center; }
+  .hero-text h1 { font-size: 3.5rem; }
+  .contact-card { max-width: 400px; margin: 0 auto; }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
 
 @media (max-width: 768px) {
   .showcase-grid, .dual-column { grid-template-columns: 1fr; }
