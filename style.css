@@ -86,8 +86,8 @@ nav {
 }
 
 .contact-card img.profile-img {
-  width: 190px;
-  height: 190px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 1.5rem;
