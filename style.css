@@ -270,6 +270,71 @@ footer { padding: 4rem 0; text-align: center; background: #0f172a; color: #f8faf
 .footer-links a { color: #38bdf8; text-decoration: none; font-weight: 500; }
 .footer-links a:hover { text-decoration: underline; }
 
+/* Responsive 16:9 Video Container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Forces a perfect 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin: 2.5rem 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 5-Image Asymmetrical Gallery */
+.creo-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Divides the container into 6 invisible columns */
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.creo-gallery img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.creo-gallery img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Top row: 2 larger images */
+.creo-gallery img:nth-child(1),
+.creo-gallery img:nth-child(2) {
+  grid-column: span 3; /* Each image takes up half the space */
+}
+
+/* Bottom row: 3 smaller images */
+.creo-gallery img:nth-child(3),
+.creo-gallery img:nth-child(4),
+.creo-gallery img:nth-child(5) {
+  grid-column: span 2; /* Each image takes up one-third of the space */
+}
+
+/* Mobile Responsiveness: Stacks everything vertically on small screens */
+@media (max-width: 768px) {
+  .creo-gallery {
+    grid-template-columns: 1fr;
+  }
+  .creo-gallery img:nth-child(n) {
+    grid-column: span 1;
+  }
+}
+
 /* Mobile responsiveness */
 @media (max-width: 850px) {
   .hero-section { padding: 4rem 0; min-height: auto; }
