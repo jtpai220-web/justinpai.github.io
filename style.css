@@ -92,6 +92,8 @@ nav {
   object-fit: cover;
   margin: 0 auto 1.5rem;
   border: 4px solid #ffffff;
+  outline: 3px solid var(--accent); /* Outer blue ring */
+  outline-offset: 4px; /* Space between the image and the blue ring */
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
