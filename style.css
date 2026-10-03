@@ -325,16 +325,6 @@ footer { padding: 4rem 0; text-align: center; background: #0f172a; color: #f8faf
   grid-column: span 2; /* Each image takes up one-third of the space */
 }
 
-.project-detail img {
-  width: 100%;
-  aspect-ratio: 4 / 3; /* Forces all images into the exact same proportions */
-  object-fit: cover;   /* Crops edges cleanly instead of stretching */
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  display: block;
-}
-
 /* Mobile Responsiveness: Stacks everything vertically on small screens */
 @media (max-width: 768px) {
   .creo-gallery {
