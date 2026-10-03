@@ -13,6 +13,8 @@
     .project-info p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem; }
     .tech-stack { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
     .tech-stack span { background: var(--pill-bg); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
+    .project-info .skill-tags { margin: 0.5rem 0 1.25rem; }
+    .project-info .skill-tag { background: var(--pill-bg); color: var(--pill-text); border: 1px solid var(--border); }
     
     /* Clean "Read More" Button */
     .btn-read-more {
@@ -53,6 +55,13 @@
         <img src="../images/arm_schematic.png" alt="EV Accumulator Housing" style="order: 1; max-height: 320px; width: auto; max-width: 100%; margin: 0 auto; display: block;">
         <div class="project-info">
           <h2>6 DOF Robotic Arm</h2>
+          <div class="skill-tags">
+            <span class="skill-tag">ESP32</span>
+            <span class="skill-tag">KiCAD</span>
+            <span class="skill-tag">SolidWorks</span>
+            <span class="skill-tag">Servo Control</span>
+            <span class="skill-tag">Mechatronics</span>
+          </div>
           <p>Designing and building a custom 6-DOF robotic arm from the ground up. Future phases will integrate the arm onto a mobile rover and use computer vision for autonomous object retrieval.</p>
           <a href="robot-arm.html" class="btn-read-more">View Full Case Study &rarr;</a>
         </div>
@@ -60,8 +69,14 @@
 
       <!-- Project 2: L3 Support bracket -->
       <div id="seat-bracket" class="project-detail">
-        <div class="project-info" style="order: 2;" style="order: 1; max-height: 320px; width: auto; max-width: 100%; margin: 0 auto; display: block;">
+        <div class="project-info" style="order: 2;" style="order: 1; max-height: 240px; width: auto; max-width: 100%; margin: 0 auto; display: block;">
           <h2>Aircraft Ejector Seat Mounting Assembly</h2>
+          <div class="skill-tags">
+            <span class="skill-tag">Creo Parametric</span>
+            <span class="skill-tag">Hardware Sourcing</span>
+            <span class="skill-tag">DFM</span>
+            <span class="skill-tag">IBM DOORS</span>
+          </div>
           <p>Designed structural ejector seat support equipment using Creo Parametric for an aircraft modernization program. Ensured the mechanical design aligned with top-level system requirements.</p>
           <a href="seat-bracket.html" class="btn-read-more">View Full Case Study &rarr;</a>
         </div>
@@ -73,6 +88,12 @@
         <img src="../images/rekt-cad.jpg" alt="Solar Tracker" style="order: 1; max-height: 320px; width: auto; max-width: 100%; margin: 0 auto; display: block;">
         <div class="project-info">
           <h2>Mechanical Rectifier</h2>
+          <div class="skill-tags">
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Onshape</span>
+            <span class="skill-tag">3D Printing</span>
+            <span class="skill-tag">Dynamics Modeling</span>
+          </div>
           <p>Designed and fabricated a mechanical rectifier to convert non-uniform rotational input into uniform rotational output. Implemented mathematical transfer functions in MATLAB to analyze the system's rotational velocity output under varying input conditions.</p>
           <a href="mechanical-rectifier.html" class="btn-read-more">View Full Case Study &rarr;</a>
         </div>
@@ -82,6 +103,11 @@
       <div id="solar-tracker" class="project-detail">
         <div class="project-info" style="order: 2;"style="order: 1; max-height: 320px; width: auto; max-width: 100%; margin: 0 auto; display: block;">
           <h2>Sun-Tracking Solar Panel</h2>
+          <div class="skill-tags">
+            <span class="skill-tag">Onshape</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Linear Actuators</span>
+          </div>
           <p>Collaborated with 4 other engineers to create a Sun-Tracking solar panel. Designed the assembly in Onshape and programmed an Arduino to process light sensor data and drive multiple linear actuators.</p>
           <a href="project-solar.html" class="btn-read-more">View Full Case Study &rarr;</a>
         </div>
